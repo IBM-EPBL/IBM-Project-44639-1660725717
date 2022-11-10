@@ -1,0 +1,54 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Predict</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      .bar {
+        margin: 0px;
+        padding: 20px;
+        background-color: white;
+        opacity: 0.6;
+        color: black;
+        font-family: "Roboto", sans-serif;
+        font-style: italic;
+        border-radius: 20px;
+        font-size: 25px;
+      }
+      a {
+        color: grey;
+        float: right;
+        text-decoration: none;
+        font-style: normal;
+        padding-right: 20px;
+      }
+      body {
+        background-image: url("https://psmag.com/.image/t_share/MTI3NTgxNDIxMjkxNDc2MjQy/waterpic.jpg");
+        background-size: cover;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="bar">
+      <a href="/predict">Predict</a>
+      <a href="/info">Info</a>
+      <a href="/about">Home</a>
+      <br />
+    </div>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container"></div>
+    </nav>
+    <div class="container">
+      <div id="content" style="margin-top: 2em">
+        {% block content %}{% endblock %}
+      </div>
+    </div>
+  </body>
+</html>
