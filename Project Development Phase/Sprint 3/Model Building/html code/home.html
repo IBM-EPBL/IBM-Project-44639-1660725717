@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>  
+
+<title>  Water Quality </title>  
+<!-- BootStrap -->
+            <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" 
+            rel="stylesheet" 
+            integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" 
+            crossorigin="anonymous">
+<style>
+body{
+background-image:url({{url_for('static',filename='water6.jpg')}});
+background-repeat:no-repeat;
+background-size:cover;
+height:100%;
+width:100%;
+}
+input{
+    text-align: center;
+    width: 20%;
+    height: 70px;
+    font-size: 14px;
+    padding-top:0px ;
+}
+label{
+    color:black;
+	}
+input[type=text]
+	{
+	 border:1px solid darkblue;
+	 border-radius:15px;
+	 box-shadow:4px 4px 4px 4px black;
+	}
+</style>
+</head>
+<body>
+ <div class="login">
+ <form action="{{ url_for('predict')}}"method="post">
+<center> 
+
+<b>
+<h1 style="font-size:60px;color:black;"  id="heading">Water Quality prediction</h1><br>
+</b>
+</center>
+
+<br><br><br><br><br>
+<center>
+<div id="bodycontent">
+
+<label>
+                    pH value  :   <input type="text" name="ph" placeholder="pH value" style="background-color:; height:40px;"  required="required" />&nbsp&nbsp&nbsp&nbsp&nbsp
+                  Hardness :   <input type="text" name="Hardness" placeholder="Hardness"  style="background-color:;  height:40px"required="required" />&nbsp&nbsp&nbsp&nbsp&nbsp
+                    Solids :  <input type="text" name="Solids" placeholder="Solids"  style="background-color:; height:40px"required="required" /><br><br><br><br><br>
+
+                   Chloramines :   <input type="text" name="Chloramines" placeholder="Chloramines"  style="background-color:; height:40px"required="required" />&nbsp&nbsp&nbsp&nbsp
+                  Sulfate :    <input type="text" name="Sulfate" placeholder="Sulfate" style="background-color:; height:40px" required="required" />&nbsp&nbsp&nbsp&nbsp&nbsp
+               Conductivity :      <input type="text" name="Conductivity" placeholder="Conductivity"  style="background-color:; height:40px" required="required" /><br><br><br><br><br>
+
+                    Organic_carbon :  <input type="text" name="Organic_carbon" placeholder="Organic_carbon" style="background-color:; height:40px" required="required" />&nbsp&nbsp&nbsp&nbsp&nbsp
+                      Trihalomethanes :<input type="text" name="Trihalomethanes" placeholder="Trihalomethanes" style="background-color:; height:40px"  required="required" />&nbsp&nbsp&nbsp&nbsp&nbsp
+                    Turbidity :   <input type="text" name="Turbidity" placeholder="Turbidity" style="background-color:; height:40px"  required="required" /><br><br><br>
+          <!-- Show button -->
+                     <div class="button_cont" ><a class="button_css"  target="_blank" rel="nofollow noopener">
+                   <button type="submit" class="btn btn-primary btn-block btn-large"><strong><a href="C:\Users\yazhithan\Desktop\mini2\water\Water-quality-test-application-main\Water Quality\templates\b.html">Water quality Test</a></strong></button></a>
+</center>
+</label>
+</div>
+</form>
+<center>
+                                                 <!--                       <h1>{{prediction_text }}</h1> -->
+  </center>
+  </div>
+
+</body>
+</html>
